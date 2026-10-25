@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>X Video Assistant · ZIP export</title>
+<link rel="stylesheet" href="batch.css">
+</head>
+<body>
+<main class="panel">
+  <div class="brand" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.593-6.644 7.593H.47l8.6-9.83L0 1.153h7.594l5.243 6.932 6.064-6.932Zm-1.29 19.49h2.04L6.48 3.24H4.29l13.32 17.403Z"/></svg><span data-i18n="zipBrand">视频打包下载</span></div>
+  <h1 data-i18n="zipHeading">一次保存，下载全部视频</h1>
+  <p class="subtitle" data-i18n="zipSubtitle">所选视频将合并为一个 ZIP 文件。MP4 保持原画质，不重新编码；压缩包主要用于集中保存，不会显著减小总体积。</p>
+  <div class="details"><span id="count" data-i18n="zipLoading">正在读取任务…</span><span data-i18n="zipPrivacy">仅保存在本机 · 不上传到其他服务器</span></div>
+  <div id="filelist" class="filelist"></div>
+  <div class="action-row"><button id="start" data-i18n="zipStart" disabled>选择保存位置并开始</button><button id="cancel" class="secondary" data-i18n="zipCancel" hidden>取消下载</button></div>
+  <div id="progressWrap" class="progress" hidden><div class="track"><div id="bar"></div></div><p id="progressText" role="status"></p></div>
+  <div id="message" role="status"></div>
+  <p class="footnote" data-i18n="zipFootnote">使用 Chrome 的文件保存对话框一次选择位置，随后逐条读取视频并直接写入 ZIP，不需要每条视频单独确认。打包过程中请保持此标签页打开；经典 ZIP 格式单包上限约 4 GB。</p>
+</main>
+<script src="i18n.js"></script><script type="module" src="batch.js"></script>
+</body></html>

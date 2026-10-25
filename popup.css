@@ -1,0 +1,110 @@
+:root{color-scheme:light dark;--bg:#fff;--fg:#171717;--secondary:#727272;--muted:#969696;--line:#eaeaea;--field:#fafafa;--hover:#f7f7f7;--contrast:#181818;--contrast-text:#fff;--danger:#b42318}
+*{box-sizing:border-box}
+body{font:13px/1.5 -apple-system,BlinkMacSystemFont,'SF Pro Text','PingFang SC','Helvetica Neue',sans-serif;background:var(--bg);color:var(--fg);width:418px;margin:0;-webkit-font-smoothing:antialiased}
+.shell{padding:22px 21px 17px;display:flex;flex-direction:column;min-height:0}.has-results .shell{height:580px;max-height:580px;overflow:hidden}.has-results .topbar,.has-results .settings,.has-results .rule,.has-results .actions{flex-shrink:0}.has-results footer{flex-shrink:0;margin-top:9px}.has-results .topbar{margin-bottom:12px}.has-results .rule{margin:12px 0}.has-results .or-label{margin-top:10px}.has-results #result{flex:1;min-height:0;overflow:hidden;max-height:none;display:flex;flex-direction:column;scroll-padding-bottom:0}.has-results #result .result-list .post-card:last-child{margin-bottom:0}.topbar{display:flex;align-items:center;gap:11px;margin-bottom:24px}
+.app-icon{width:32px;height:32px;display:grid;place-items:center;flex:none}.app-icon svg{width:27px;height:27px}
+.app-name{min-width:0;flex:1}.app-name h1{font-size:15px;line-height:1.35;letter-spacing:-.25px;font-weight:670;margin:0}.app-desc{font-size:11px;color:var(--secondary);margin-top:3px}.version{font-size:10px;color:var(--muted);align-self:flex-start;margin-top:4px}
+.section-heading{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-bottom:10px}.section-heading label,h2{font-size:13px;font-weight:630;line-height:1.3}.subtle{font-size:11px;color:var(--muted)}
+.select-wrap{position:relative}.select-wrap select{width:100%;height:41px;appearance:none;border:1px solid var(--line);background:var(--field);color:var(--fg);border-radius:10px;padding:0 36px 0 13px;font:inherit;font-weight:520;outline:none;cursor:pointer}.select-wrap svg{position:absolute;right:12px;top:12px;width:16px;height:16px;pointer-events:none;color:var(--secondary)}
+button:focus-visible,input:focus-visible,select:focus-visible,a:focus-visible{outline:2px solid var(--fg);outline-offset:2px}.helper{font-size:11px;color:var(--secondary);margin:8px 0 0;min-height:15px}.rule{height:1px;background:var(--line);margin:20px 0}
+h2{margin:0 0 12px}.button-primary{display:flex;align-items:center;gap:9px;border:none;background:var(--contrast);color:var(--contrast-text);width:100%;height:43px;padding:0 14px;text-align:left;border-radius:10px;font:inherit;font-weight:580;cursor:pointer}.button-primary:hover{opacity:.88}.button-primary .button-icon{display:flex;align-items:center}.button-primary .button-icon svg{width:18px;height:18px}.button-primary .arrow{width:17px;height:17px;margin-left:auto;opacity:.68}
+.button-secondary{width:100%;height:38px;margin-top:9px;background:var(--bg);border:1px solid var(--line);border-radius:9px;color:var(--fg);cursor:pointer;font:inherit;font-weight:520}.button-secondary:hover{background:var(--hover)}.button-primary:disabled,.button-secondary:disabled{opacity:.6;cursor:wait}.or-label{margin:15px 0 9px;font-size:11px;color:var(--secondary)}.url-row{display:flex;gap:8px}.url-row input{min-width:0;flex:1;height:40px;border:1px solid var(--line);border-radius:9px;background:var(--field);color:var(--fg);font-size:12px;line-height:1.4;padding:0 12px;outline:none}.url-row input::placeholder{color:var(--muted)}.button-icon-only{width:40px;height:40px;display:grid;place-items:center;border:1px solid var(--line);border-radius:9px;background:var(--bg);color:var(--fg);cursor:pointer;flex:none}.button-icon-only:hover{background:var(--hover)}.button-icon-only svg{width:17px;height:17px}
+#result:not(:empty){margin-top:18px;border-top:1px solid var(--line);padding-top:13px;max-height:360px;overflow-y:auto;overscroll-behavior:contain;scrollbar-width:thin}#result .muted{margin:0 0 12px;color:var(--secondary);font-size:11px;line-height:1.6}#result .error{margin:0;color:var(--danger);font-size:12px}
+.batchbar{display:flex;align-items:center;gap:9px;border:1px solid var(--line);border-radius:10px;background:var(--field);padding:8px 9px;margin:0 0 12px}.batchbar label{display:inline-flex;align-items:center;gap:5px;font-size:11px;white-space:nowrap;cursor:pointer}.batchbar input,.video-check{width:15px;height:15px;margin:0;accent-color:var(--contrast)}.batch-count{flex:1;font-size:11px;color:var(--secondary);white-space:nowrap}.batchbar button{background:var(--contrast);color:var(--contrast-text);border:0;border-radius:7px;padding:8px 12px;font-size:11px;font-weight:600;cursor:pointer;white-space:nowrap}.batchbar button:disabled{opacity:.38;cursor:default}.batch-summary:not(:empty){font-size:11px;line-height:1.6;background:var(--field);border-radius:8px;color:var(--secondary);padding:9px 10px;margin-bottom:11px}
+.post-card{border:1px solid var(--line);border-radius:12px;padding:13px 12px 10px;margin-bottom:11px;background:var(--bg)}.post-head{display:flex;align-items:center;gap:9px;min-width:0}.avatar{width:36px;height:36px;flex:none;border-radius:50%;background:var(--field);border:1px solid var(--line);display:grid;place-items:center;color:var(--secondary);font-weight:650;font-size:15px;position:relative;overflow:hidden}.avatar img{width:100%;height:100%;object-fit:cover;position:absolute;inset:0}.author-info{min-width:0;flex:1}.author-name{font-size:12px;font-weight:670;color:var(--fg);text-decoration:none;display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.author-name:hover{text-decoration:underline}.author-handle{font-size:10.5px;color:var(--secondary);overflow:hidden;white-space:nowrap;text-overflow:ellipsis}.post-link{font-size:10.5px;color:var(--secondary);text-decoration:none;white-space:nowrap;margin-left:4px}.post-link:hover{color:var(--fg)}.post-excerpt{font-size:12px;color:var(--fg);line-height:1.55;margin:10px 0 9px;word-break:break-word;display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:3;overflow:hidden}
+.video-entry{display:flex;align-items:center;gap:8px;margin-top:11px;padding-top:11px;border-top:1px solid var(--line)}.video-number{font-size:11px;color:var(--secondary);white-space:nowrap}.video-quality{height:32px;min-width:0;flex:1;background:var(--field);color:var(--fg);border:1px solid var(--line);border-radius:8px;font:11.5px -apple-system,BlinkMacSystemFont,'PingFang SC',sans-serif;padding:0 6px;cursor:pointer}.download-one{height:32px;min-width:51px;padding:0 10px;border:1px solid var(--line);border-radius:8px;background:var(--bg);color:var(--fg);cursor:pointer;font-size:11.5px;font-weight:570}.download-one:hover{background:var(--hover)}.download-one:disabled{opacity:.6;cursor:wait}.video-note{color:var(--muted);font-size:10px;margin:5px 0 2px 24px;font-variant-numeric:tabular-nums;overflow-wrap:anywhere}
+footer{display:flex;align-items:center;gap:6px;color:var(--muted);font-size:10.5px;margin-top:18px}footer svg{width:13px;height:13px;flex:none}
+@media(prefers-color-scheme:dark){:root{--bg:#171717;--fg:#f2f2f2;--secondary:#aaa;--muted:#888;--line:#363636;--field:#222;--hover:#2a2a2a;--contrast:#f3f3f3;--contrast-text:#171717;--danger:#ff9188}}
+@media(prefers-reduced-motion:reduce){*{transition:none!important}}
+
+/* v1.5.1: selection toolbar is a genuine fixed sibling of the scrolling list,
+   rather than a sticky child that overlays posts or leaves a transparent gap. */
+.has-results #result:not(:empty){display:flex;flex-direction:column;flex:1;min-height:0;max-height:none;overflow:hidden;padding-top:11px}
+.has-results #result > .muted{flex:none;margin:0 0 3px}
+.has-results #result > .batchbar{flex:none;position:static;z-index:auto;margin:0;padding:10px 2px 12px;border:0;border-bottom:1px solid var(--line);border-radius:0;background:var(--bg);box-shadow:none}
+.has-results #result > .batch-summary:not(:empty){flex:none;max-height:75px;overflow-y:auto;margin:9px 0 0}
+.has-results #result > .result-list{flex:1;min-height:0;overflow-y:auto;overflow-x:hidden;overscroll-behavior:contain;scrollbar-width:thin;padding:10px 2px 16px 0;scroll-padding-bottom:16px}
+.has-results #result > .result-list .post-card:last-child{margin-bottom:0}
+
+#otherModes{margin-top:10px}#otherModes summary{cursor:pointer;color:var(--secondary);font-size:11px;user-select:none;line-height:1.6;padding:5px 0;list-style:none}#otherModes summary::after{content:'⌄';float:right;font-size:15px;line-height:1;color:var(--muted);transition:transform .1s}#otherModes[open] summary::after{transform:rotate(180deg)}#otherModes summary::-webkit-details-marker{display:none}
+#otherModes[open] .button-secondary{margin-top:8px}.has-results #otherModes:not([open]){margin-top:6px}.has-results footer{display:none}
+
+/* v1.5.2: genuine nested scrolling. The outer popup can scroll away settings
+   while the result list has its own, much taller scroll area. The batch
+   toolbar is a separate opaque sibling and never overlaps list items. */
+body.has-results {
+  height:auto;
+  max-height:none;
+  overflow:visible;
+}
+html { scrollbar-width:thin; }
+.has-results .shell {
+  height:auto;
+  max-height:none;
+  overflow:visible;
+  min-height:0;
+  padding-bottom:18px;
+}
+.has-results #result:not(:empty) {
+  flex:none;
+  min-height:0;
+  max-height:none;
+  overflow:visible;
+  display:flex;
+  flex-direction:column;
+}
+.has-results #result > .result-list {
+  flex:none;
+  height:auto;
+  max-height:460px;
+  min-height:0;
+  overflow-x:hidden;
+  overflow-y:auto;
+  overscroll-behavior-y:auto;
+  padding-bottom:18px;
+}
+.batch-count-group {
+  display:flex;
+  flex:1;
+  min-width:0;
+  flex-direction:column;
+  justify-content:center;
+  gap:1px;
+}
+.batch-count-group .batch-count {
+  flex:none;
+  color:var(--fg);
+  font-size:11px;
+  font-weight:600;
+  line-height:1.35;
+}
+.batch-size {
+  display:block;
+  max-width:100%;
+  color:var(--secondary);
+  font-size:10px;
+  line-height:1.45;
+  overflow:hidden;
+  white-space:nowrap;
+  text-overflow:ellipsis;
+  font-variant-numeric:tabular-nums;
+}
+.has-results #result > .batchbar {
+  gap:12px;
+  padding:10px 2px 12px;
+  align-items:center;
+}
+.has-results #result > .batchbar button { flex:none; }
+
+/* v1.6.0: secondary language preference lives behind a quiet gear in header. */
+.topbar{position:relative}
+.more-settings{position:relative;flex:none;order:1}
+.version{order:2;margin:0 0 0 2px;align-self:center}
+.more-settings>summary{display:grid;place-items:center;width:27px;height:27px;border:0;border-radius:8px;cursor:pointer;color:var(--secondary);list-style:none}
+.more-settings>summary::-webkit-details-marker{display:none}
+.more-settings>summary:hover,.more-settings[open]>summary{color:var(--fg);background:var(--field)}
+.more-settings>summary svg{height:17px;width:17px}
+.settings-flyout{position:absolute;top:34px;right:-39px;width:270px;padding:15px;border:1px solid var(--line);border-radius:12px;background:var(--bg);box-shadow:0 14px 40px rgba(0,0,0,.15);z-index:100}
+.settings-flyout label{display:block;font-size:12px;font-weight:620;margin-bottom:9px}
+.settings-flyout select{width:100%;height:37px;border:1px solid var(--line);border-radius:8px;padding:0 10px;background:var(--field);color:var(--fg);font:inherit}
+.settings-flyout p{font-size:11px;line-height:1.6;color:var(--secondary);margin:10px 0 0}

@@ -1,0 +1,57 @@
+name: Import source bundle
+
+on:
+  push:
+    paths:
+      - "X-Video-Assistant-1.6.0-GitHub-Source.zip"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  import-source:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out main
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+
+      - name: Extract source bundle
+        shell: bash
+        run: |
+          set -euo pipefail
+          archive="X-Video-Assistant-1.6.0-GitHub-Source.zip"
+          test -f "$archive"
+          rm -rf /tmp/xva-source
+          mkdir -p /tmp/xva-source
+          unzip -q "$archive" -d /tmp/xva-source
+          find /tmp/xva-source -type d -name "__pycache__" -prune -exec rm -rf {} +
+          find /tmp/xva-source -type f -name "*.pyc" -delete
+          cp -a /tmp/xva-source/. .
+          rm -f "$archive"
+
+      - name: Verify key project files
+        run: |
+          test -f manifest.json
+          test -f content.js
+          test -f background.js
+          test -f popup.html
+          test -f privacy-policy.html
+          test -f tests/zip.test.js
+
+      - name: Commit extracted source
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          if git diff --cached --quiet; then
+            echo "No source changes to commit."
+            exit 0
+          fi
+          git commit -m "Import X Video Assistant v1.6.0 source"
+          git push origin main

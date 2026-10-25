@@ -1,0 +1,10 @@
+{
+  "name": "x-video-assistant",
+  "version": "1.6.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "node --test tests/*.test.js",
+    "check": "node --check media.js && node --check background.js && node --check content.js && node --check page-hook.js && node --check popup.js && node --check quality.js && node --check batch.js && node --check zip-stream.js && node --check i18n.js"
+  }
+}
